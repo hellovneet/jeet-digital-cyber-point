@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Owner Login | Jeetu Digital Cyber Point</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="navbar">
+  <div class="logo">⚡ Jeetu Digital <b>Cyber Point</b></div>
+  <a href="index.html" style="text-decoration:none;color:#6eefff;font-size:13px;font-weight:700">← Back to Website</a>
+</header>
+<section class="section admin-section" id="admin">
+  <div class="section-heading">
+    <span>ADMIN PANEL</span>
+    <h2>Order Management</h2>
+    <p>Demo dashboard for managing orders in this browser.</p>
+  </div>
+  <div id="loginBox" class="login-box">
+    <h3>🔐 Admin Login</h3>
+    <input id="adminUser" placeholder="Username">
+    <input id="adminPass" type="password" placeholder="Password">
+    <button class="btn primary" onclick="adminLogin()">Login</button>
+    <small>Admin credentials are configured for this site.</small>
+  </div>
+
+  <div id="adminPanel" class="hidden">
+  <div class="admin-toolbar">
+    <select id="statusFilter" onchange="renderAdmin()">
+      <option value="All">All Orders</option>
+      <option>Pending</option><option>Processing</option><option>Ready</option><option>Completed</option><option>Cancelled</option>
+    </select>
+    <button class="btn danger" onclick="clearOrders()">Clear Local Orders</button>
+  </div>
+  <div id="adminOrders" class="admin-orders"></div>
+  </div>
+</section>
+<script src="script.js"></script>
+</body>
+</html>
